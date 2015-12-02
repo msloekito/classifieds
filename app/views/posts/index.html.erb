@@ -1,10 +1,12 @@
-<header>
-  <h1>Classified</h1>
-  <h3>Community Listings</h3>
-</header>
-
+<h4>Lost</h4>
 <ul>
   <% @posts.each do |post| %>
     <li><%= link_to post.title, post %></li>
   <% end %>
 </ul>
+
+<h4>Found</h4>
+
+<h4>Free</h4>
+
+<h4>Wanted</h4>
