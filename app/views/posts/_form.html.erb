@@ -7,7 +7,7 @@
       </li>
       <li>
         <%= f.label :category %>
-        <%= f.text_field :category %>
+        <%= f.select :category, Post::CATEGORIES, prompt: "Pick one" %>
       </li>
       <li>
         <%= f.label :description %>
