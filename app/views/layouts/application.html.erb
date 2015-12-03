@@ -8,19 +8,23 @@
 </head>
 <body>
 
-  <header>
-    <h1>Classified</h1>
-    <h3>Community Listings</h3>
-  </header>
-
-  <nav>
-    <%= link_to "Home", root_path %>
-    <%= link_to "New", new_post_path %>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to "Classifieds", root_path, class: "navbar-brand" %>
+      </div>
+    </div>
   </nav>
 
-  <%= flash[:notice] %>
+  <div class="container">
+    <% flash.each do |key, message| %>
+      <div class="alert alert-<%= key %>">
+        <%= message %>
+      </div>
+    <% end %>
 
-<%= yield %>
+    <%= yield %>
+  </div>
 
 </body>
 </html>
