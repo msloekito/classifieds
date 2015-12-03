@@ -12,8 +12,11 @@
 <h4>Found</h4>
 <ul>
   <% @posts.found.each do |post| %>
+  <div class="boxed">
     <li><%= link_to post.title, post %></li>
+    <h3><%= link_to post.description %></h3>
   <% end %>
+  </div>
 </ul>
 
 <h4>Free</h4>
