@@ -1,5 +1,9 @@
 <header>
-  <h2>Edit a post</h2>
+  <h2><%= @post.title %></h2>
 </header>
 
-<%= render 'form' %>
+<%= @post.description %>
+<%= @post.category %>
+<%= image_tag(@post.picture) %>
+
+<div class="btn btn-primary"><%= link_to "edit post", edit_post_path %></div>

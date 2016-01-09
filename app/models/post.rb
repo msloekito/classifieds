@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   CATEGORIES = %w(Lost Found Free Wanted)
-
+  mount_uploader :picture, PictureUploader
   validates :title, :name, :email, presence: true
   validates :category, inclusion: { in: CATEGORIES }
 

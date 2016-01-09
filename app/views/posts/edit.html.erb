@@ -1,0 +1,37 @@
+<%= form_for(@post) do |f| %>
+  <fieldset>
+    <ol>
+      <li>
+        <%= f.label :title %>
+        <%= f.text_field :title, autofocus: true %>
+      </li>
+      <li>
+        <%= f.label :category %>
+        <%= f.select :category, Post::CATEGORIES, prompt: "Pick one" %>
+      </li>
+      <li>
+        <%= f.label :description %>
+        <%= f.text_area :description, cols: 40, rows: 7 %>
+      </li>
+      <li>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </li>
+      <li>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </li>
+    </ol>
+    <p>
+      <%= f.submit %>
+    </p>
+  </fieldset>
+  <% end %>
+<%= form_for @post, html: { multipart: true } do |f| %>
+  <p>
+    <label>Picture</label></label>
+    <%= f.file_field :picture %>
+    <%= f.hidden_field :picture_cache %>
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </p>
+<% end %>

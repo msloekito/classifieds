@@ -5,27 +5,27 @@
 <h4>Lost</h4>
 <ul>
   <% @posts.lost.each do |post| %>
-    <li><%= link_to post.title, post %></li>
+    <li><%= link_to post.title, post_path(post) %></li>
   <% end %>
 </ul>
 
 <h4>Found</h4>
 <ul>
   <% @posts.found.each do |post| %>
-    <li><%= link_to post.title, post %></li>
+    <li><%= link_to post.title, post_path(post) %></li>
   <% end %>
 </ul>
 
 <h4>Free</h4>
 <ul>
   <% @posts.free.each do |post| %>
-    <li><%= link_to post.title, post %></li>
+    <li><%= link_to post.title, post_path(post) %></li>
   <% end %>
 </ul>
 
 <h4>Wanted</h4>
 <ul>
   <% @posts.wanted.each do |post| %>
-    <li><%= link_to post.title, post %></li>
+    <li><%= link_to post.title, post_path(post) %></li>
   <% end %>
 </ul>
